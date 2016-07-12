@@ -1,0 +1,106 @@
+.rowMenu div {
+    background: #245478;
+}
+
+.rowMenu01 div {
+    height: 40px;
+    color: #FFF7DA;
+}
+
+.rowMenu02left div {
+    height: 90px;
+}
+
+a.linkLang {
+    font-family: 'Roboto', sans-serif;
+    color: #FFF7DA;
+    text-decoration: none;
+}
+
+a.linkLang:hover,
+a.linkLang:focus{
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+.blueText {
+    font-family: 'Roboto', sans-serif;
+    color: #245478;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #245478;
+    background-color: white;
+}
+
+h2,h3 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #245478;
+    background-color: white;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    color: #3990a3;
+    background-color: white;
+}
+
+.textLogo {
+    color: #F6AE01;
+    font-size: xx-large
+}
+
+.textBlocks {
+    font-family: 'Roboto', sans-serif;
+    color: #245478;
+}
+
+.textBlocksWhite {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: blue;
+}
+
+
+.pClass {
+    text-align: center;
+}
+
+.rFooter {
+    background: #245478;
+    color: #FFF7DA;
+    text-align: center;
+}
+
+.rowFooter1 {
+    height: 40px;
+}
+.rowFooter2 {
+    height: 45px;
+}
+
+.rowFooter3 {
+    height: 45px;
+}
+
+.font-sizeXlarge {
+    font-size: x-large;
+}
+
+.divH3 {
+    height: 85px;
+    display: table;
+    width: 100%;
+}
+
+.divH3Inner {
+    display: table-cell;
+    vertical-align: middle;
+}
