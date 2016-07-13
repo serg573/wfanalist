@@ -177,7 +177,7 @@
 		</div>
 		<div>
 			<div class="row rFooter rowFooter2">
-				<div class="col-lg-3"> &copy;, все права защищены. </div>
+				<div class="col-lg-3"> &copy; <spring:message code="bottom.rights" /> </div>
 				<div class="col-lg-4"> </div>
 				<div class="col-lg-5"> Разработка: Васильева Дарья, Васильев Сергей </div>
 			</div>

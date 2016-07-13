@@ -21,7 +21,7 @@ import java.util.Date;
 @Repository("Theweathernetwork")
 public class Theweathernetwork extends AbstractSourse implements ConnectedSource {
 
-    //current
+    //curernt
     private int temperature = -100;
     private int temperature_l = -100;
     private int humidity = -100;
@@ -53,12 +53,12 @@ public class Theweathernetwork extends AbstractSourse implements ConnectedSource
 
     private WebDriver driver;
 
-    @Autowired
-    private ApplicationContext appContext;
+    //@Autowired
+    //private ApplicationContext appContext;
 
     public Theweathernetwork() {
 
-        PropertyPlaceholderConfigurer properties = (PropertyPlaceholderConfigurer) appContext.getBean("propertyConfigurer");
+        //PropertyPlaceholderConfigurer properties = (PropertyPlaceholderConfigurer) appContext.getBean("propertyConfigurer");
 
         if (System.getProperty("os.name").equals("Linux")) {
             System.setProperty("phantomjs.binary.path", "/home/serg/Downloads/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");

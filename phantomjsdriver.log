@@ -156,3 +156,20 @@ leanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2016-05-28T11:37:19.617Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2016-05-28T11:42:19.615Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
 [INFO  - 2016-05-28T11:47:19.646Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-07-13T10:44:37.829Z] GhostDriver - Main - running on port 17420
+[INFO  - 2016-07-13T10:44:38.448Z] Session [cc07a5b0-48e6-11e6-9496-6dc4d1b87b97] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-07-13T10:44:38.449Z] Session [cc07a5b0-48e6-11e6-9496-6dc4d1b87b97] - page.customHeaders:  - {}
+[INFO  - 2016-07-13T10:44:38.449Z] Session [cc07a5b0-48e6-11e6-9496-6dc4d1b87b97] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-07-13T10:44:38.449Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: cc07a5b0-48e6-11e6-9496-6dc4d1b87b97
+[INFO  - 2016-07-13T10:49:16.421Z] GhostDriver - Main - running on port 19669
+[INFO  - 2016-07-13T10:49:16.950Z] Session [7208e690-48e7-11e6-8655-852a5dc2ff2a] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2016-07-13T10:49:16.957Z] Session [7208e690-48e7-11e6-8655-852a5dc2ff2a] - page.customHeaders:  - {}
+[INFO  - 2016-07-13T10:49:16.958Z] Session [7208e690-48e7-11e6-8655-852a5dc2ff2a] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2016-07-13T10:49:16.958Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 7208e690-48e7-11e6-8655-852a5dc2ff2a
+[INFO  - 2016-07-13T10:49:37.823Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-07-13T10:54:16.420Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-07-13T10:54:37.824Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-07-13T10:59:16.420Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-07-13T10:59:37.824Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-07-13T11:04:16.419Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2016-07-13T11:04:37.824Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
