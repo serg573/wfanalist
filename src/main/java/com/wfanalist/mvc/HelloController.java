@@ -60,7 +60,7 @@ public class HelloController extends HttpServlet {
 		chartsList.fillListOfCharts(wfanalistDAO.findCityByName("Kyiv"));
 		model.addAttribute("chartsList", chartsList);
 
-		//testFSource(); later
+		//testFSource(); later 
 
 		return "hello";
 
