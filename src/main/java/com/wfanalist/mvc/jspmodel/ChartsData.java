@@ -53,7 +53,6 @@ public class ChartsData {
         List<Forecasts_history> forecasts_historyList = wfanalistDAO.historyListDateCitySourse(dateMonthAgo, this.city, this.source);
 
         Forecasts_history crHist;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy, MM, dd");
         String sDay;
 
         for (int i=0; i<forecasts_historyList.size(); i++) {
@@ -63,7 +62,9 @@ public class ChartsData {
             if (rows.equals("") == false) {rows = rows+", ";}
 
             crHist = forecasts_historyList.get(i);
-            sDay = "new Date("+dateFormat.format(crHist.getDay())+")";
+
+            calendar.setTime(crHist.getDay());
+            sDay = "new Date("+calendar.get(calendar.YEAR)+", "+calendar.get(calendar.MONTH)+", "+calendar.get(calendar.DAY_OF_MONTH)+")";
 
             rows = rows + "["+sDay+", "+crHist.getToday()+", "+forecasts_historyList.get(i-1).getOne_day()+", "+forecasts_historyList.get(i-1).getTwo_days()+", "+forecasts_historyList.get(i-1).getThree_days()+", "+forecasts_historyList.get(i-1).getFour_days()+"]";
 
