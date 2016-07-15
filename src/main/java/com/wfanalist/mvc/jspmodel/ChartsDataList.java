@@ -44,7 +44,7 @@ public class ChartsDataList {
 
             crChData = (ChartsData) appContext.getBean("ChartsData");
 
-            if (crChData.fillTheDaya(city, cSource) == true) {
+            if (crChData.fillTheData(city, cSource) == true) {
                 lData.add(crChData);
             }
         }

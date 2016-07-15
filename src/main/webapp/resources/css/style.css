@@ -104,3 +104,27 @@ h4 {
     display: table-cell;
     vertical-align: middle;
 }
+
+.tableStatistic {
+    background-color: #c4dcdc;
+}
+
+.theadStatistic {
+    background-color: #3990a3;
+}
+
+
+.thStatistic {
+    text-align: center;
+    color: white;
+}
+
+.tdStatistic {
+    text-align: center;
+}
+
+.tabsMenu {
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    color: #245478;
+}

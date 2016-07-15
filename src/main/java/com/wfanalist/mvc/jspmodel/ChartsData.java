@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -20,7 +19,7 @@ import java.util.TimeZone;
 
 @Repository("ChartsData")
 @Scope("prototype")
-public class ChartsData {
+public class ChartsData extends AbstractDataClass {
 
     private String rows = "";
     private Sources source;
@@ -31,33 +30,28 @@ public class ChartsData {
     private String chartName = "";
     private String chartDivName = "";
 
-    private int numDays = 34;
-
     @Autowired
     WFanalistDAO wfanalistDAO;
 
     public ChartsData() {
     }
 
-    public boolean fillTheDaya(Cities city, Sources source) {
+    public boolean fillTheData(Cities city, Sources source) {
 
         this.city = city;
         this.source = source;
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeZone(TimeZone.getTimeZone("Europe/Kiev"));
-        calendar.add(Calendar.DATE, -numDays);
-
-        Date dateMonthAgo = calendar.getTime();
+        Date dateMonthAgo = getDateMonthAgo();
 
         List<Forecasts_history> forecasts_historyList = wfanalistDAO.historyListDateCitySourse(dateMonthAgo, this.city, this.source);
 
+        Calendar calendar = Calendar.getInstance();
         Forecasts_history crHist;
         String sDay;
 
         for (int i=0; i<forecasts_historyList.size(); i++) {
 
-            if (i<=3) {continue;}
+            if (i<=3) {continue;} // minus days of forecast
 
             if (rows.equals("") == false) {rows = rows+", ";}
 
