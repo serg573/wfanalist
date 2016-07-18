@@ -81,23 +81,27 @@ public class Theweathernetwork extends AbstractSourse implements ConnectedSource
 
         String str = driver.getPageSource();
 
+        try {
+            Thread.sleep(1000);                 //1000 milliseconds is one second.
+        } catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+
         Document document = Jsoup.parse(str);
 
-
         //Current
-        Elements divCurWeather = document.select("div.current-weather.clearfix");
-        Element fElement = divCurWeather.first();
-
-
+        Element fElement = document.select("div.temperature-area.clearfix").first();
 
         temperature = temperatureToInt(fElement.select("p.temperature").first().text());
         today = temperature;
         //we don't have temperature and temperature_l here. Only current temperature
 
-        humidity = temperatureToInt(fElement.select("div.humidity.bx-child").first().getElementsByTag("span").first().text());
         feelsLike = temperatureToInt(fElement.select("p.mcity-feels-like").first().select("span").first().text());
-        wind = fElement.select("div.wind.first.bx-child").first().select("span").first().text();
-        //wind = wind.substring(0, wind.indexOf('k'));
+
+        Element detailedMetrics = document.getElementById("detailed-metrics");
+
+        humidity = temperatureToInt(detailedMetrics.select("div.humidity").first().select("span").first().text());
+        wind = detailedMetrics.select("div.wind.first").first().select("span").first().text();
 
 
         //Forecast
@@ -108,6 +112,9 @@ public class Theweathernetwork extends AbstractSourse implements ConnectedSource
         four_days = temperatureToInt(divForWeather.select("div.day_4").first().select("div.chart-daily-temp.seven_days_metric_c").first().text());
 
         one_day_l = temperatureToInt(divForWeather.select("div.day_1").first().select("div.chart-daily-temp-low.seven_days_metric_c").first().text());
+        two_days_l = temperatureToInt(divForWeather.select("div.day_2").first().select("div.chart-daily-temp-low.seven_days_metric_c").first().text());
+        three_days_l = temperatureToInt(divForWeather.select("div.day_3").first().select("div.chart-daily-temp-low.seven_days_metric_c").first().text());
+        four_days_l = temperatureToInt(divForWeather.select("div.day_4").first().select("div.chart-daily-temp-low.seven_days_metric_c").first().text());
 
         fileFullName1today = fElement.select("div.weather-icon").first().select("img").first().attr("src");
 

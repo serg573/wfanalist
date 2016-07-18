@@ -25,6 +25,7 @@ abstract class AbstractSourse {
         temp = temp.replaceAll("Precipitation", "");
 
         temp = temp.replaceAll(" ", "");
+        temp = temp.replaceAll(" ", ""); //other symbol
 
         return Integer.parseInt(temp);
     }

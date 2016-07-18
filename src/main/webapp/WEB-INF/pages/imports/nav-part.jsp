@@ -17,7 +17,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="/wfanalist"><spring:message code="nav.home" /></a></li>
                             <li><a href="/wfanalist/statistic"><spring:message code="nav.statistics" /></a></li>
-                            <li><a href="#"><spring:message code="nav.reviews" /></a></li>
+                            <li><a href="/wfanalist/notready"><spring:message code="nav.reviews" /></a></li>
                         </ul>
                     </div>
                 </div>
