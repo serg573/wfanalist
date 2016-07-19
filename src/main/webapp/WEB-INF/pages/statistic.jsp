@@ -85,15 +85,15 @@
                         <table class="table tableStatistic">
                             <thead  class="theadStatistic">
                             <tr>
-                                <th rowspan="2" class="thStatistic">Дата</th>
-                                <th rowspan="2" class="thStatistic">Реальная температура</th>
-                                <th colspan="4" class="thStatistic">Было спрогнозировано за:</th>
+                                <th rowspan="2" class="thStatistic"><spring:message code="statistictab.date" /></th>
+                                <th rowspan="2" class="thStatistic"><spring:message code="statistictab.realtemperature" /></th>
+                                <th colspan="4" class="thStatistic"><spring:message code="statistictab.waspredicted" /></th>
                             </tr>
                             <tr>
-                                <th class="thStatistic">1 день</th>
-                                <th class="thStatistic">2 дня</th>
-                                <th class="thStatistic">3 дня</th>
-                                <th class="thStatistic">4 дня</th>
+                                <th class="thStatistic">1 <spring:message code="statistictab.day" /></th>
+                                <th class="thStatistic">2 <spring:message code="statistictab.days" /></th>
+                                <th class="thStatistic">3 <spring:message code="statistictab.days" /></th>
+                                <th class="thStatistic">4 <spring:message code="statistictab.days" /></th>
                             </tr>
                             </thead>
                             <tbody>

@@ -15,7 +15,7 @@ import java.util.Date;
 
     @NamedQuery(
         name = "selectHistoryDateCitySource",
-        query = "from Forecasts_history f where f.day >= :day and f.city.id = :cityid and f.source.id = :sourceid"
+        query = "from Forecasts_history f where f.day >= :day and f.city.id = :cityid and f.source.id = :sourceid order by f.date desc"
     )
 })
 

@@ -1,7 +1,6 @@
 package com.wfanalist.mvc;
 
 import com.wfanalist.mvc.dao.WFanalistDAO;
-import com.wfanalist.mvc.fsources.Theweathernetwork;
 import com.wfanalist.mvc.jspmodel.ChartsDataList;
 import com.wfanalist.mvc.jspmodel.TableStatisticDataList;
 import com.wfanalist.mvc.model.*;
@@ -88,8 +87,8 @@ public class MainController extends HttpServlet {
 		//Sinoptik sr1 = (Sinoptik) appContext.getBean("Sinoptik");
 		//sr1.parseReference("https://sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%BA%D0%B8%D0%B5%D0%B2");
 
-		Theweathernetwork sr2 = (Theweathernetwork) appContext.getBean("Theweathernetwork");
-		sr2.parseReference("http://www.theweathernetwork.com/ua/weather/kyiv-kiev-city/kiev?wx_auto_reload=forecasts:%20city%20page:%20auto%20refresh");
+		//Theweathernetwork sr2 = (Theweathernetwork) appContext.getBean("Theweathernetwork");
+		//sr2.parseReference("http://www.theweathernetwork.com/ua/weather/kyiv-kiev-city/kiev?wx_auto_reload=forecasts:%20city%20page:%20auto%20refresh");
 
 		//Accuweather sr3 = (Accuweather) appContext.getBean("Accuweather");
 		//sr3.parseReference("http://www.accuweather.com/en/ua/kyiv/324505/daily-weather-forecast/324505?lang=en-us");

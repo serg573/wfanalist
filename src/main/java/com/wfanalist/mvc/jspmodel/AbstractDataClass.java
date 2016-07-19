@@ -12,7 +12,7 @@ import java.util.TimeZone;
 
 public class AbstractDataClass {
 
-    private int numDays = 34;
+    private int numDays = 30;
 
     protected Date getDateMonthAgo() {
 

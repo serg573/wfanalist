@@ -60,7 +60,7 @@ public class TableStatisticData extends AbstractDataClass {
 
         for (int i=0; i<forecasts_historyList.size(); i++) {
 
-            if (i<=3) {continue;} // minus days of forecast
+            //if (i<=3) {continue;} // minus days of forecast
 
             crHist = forecasts_historyList.get(i);
 

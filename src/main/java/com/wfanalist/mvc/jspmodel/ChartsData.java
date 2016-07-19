@@ -46,21 +46,65 @@ public class ChartsData extends AbstractDataClass {
         List<Forecasts_history> forecasts_historyList = wfanalistDAO.historyListDateCitySourse(dateMonthAgo, this.city, this.source);
 
         Calendar calendar = Calendar.getInstance();
-        Forecasts_history crHist;
-        String sDay;
+        Forecasts_history crHist, crHist1, crHist2, crHist3, crHist4;
+        String sDay, sToday, sOneDay, sTwoDays, sThreeDays, sFourDays;
+        int nextNumRow;
 
-        for (int i=0; i<forecasts_historyList.size(); i++) {
-
-            if (i<=3) {continue;} // minus days of forecast
+        for (int i=0; i<forecasts_historyList.size()-4; i++) {
 
             if (rows.equals("") == false) {rows = rows+", ";}
+
+            nextNumRow = i+1;
 
             crHist = forecasts_historyList.get(i);
 
             calendar.setTime(crHist.getDay());
             sDay = "new Date("+calendar.get(calendar.YEAR)+", "+calendar.get(calendar.MONTH)+", "+calendar.get(calendar.DAY_OF_MONTH)+")";
 
-            rows = rows + "["+sDay+", "+crHist.getToday()+", "+forecasts_historyList.get(i-1).getOne_day()+", "+forecasts_historyList.get(i-1).getTwo_days()+", "+forecasts_historyList.get(i-1).getThree_days()+", "+forecasts_historyList.get(i-1).getFour_days()+"]";
+            sToday = ""+crHist.getToday();
+
+            //sometimes dates can be omitted, so:
+
+            //one day before
+            calendar.add(Calendar.DATE, -1);
+            crHist1 = forecasts_historyList.get(nextNumRow);
+            if (calendar.getTime().equals(crHist1.getDay())) {
+                sOneDay = ""+crHist1.getOne_day();
+                nextNumRow++;
+            } else {
+                sOneDay = "null";
+            }
+
+            //two days before
+            calendar.add(Calendar.DATE, -1);
+            crHist2 = forecasts_historyList.get(nextNumRow);
+            if (calendar.getTime().equals(crHist2.getDay())) {
+                sTwoDays = ""+crHist2.getTwo_days();
+                nextNumRow++;
+            } else {
+                sTwoDays = "null";
+            }
+
+            //three days before
+            calendar.add(Calendar.DATE, -1);
+            crHist3 = forecasts_historyList.get(nextNumRow);
+            if (calendar.getTime().equals(crHist3.getDay())) {
+                sThreeDays = ""+crHist3.getThree_days();
+                nextNumRow++;
+            } else {
+                sThreeDays = "null";
+            }
+
+            //four days before
+            calendar.add(Calendar.DATE, -1);
+            crHist4 = forecasts_historyList.get(nextNumRow);
+            if (calendar.getTime().equals(crHist4.getDay())) {
+                sFourDays = ""+crHist4.getFour_days();
+            } else {
+                sFourDays = "null";
+            }
+
+            rows = rows + "["+sDay+", "+sToday+", "+sOneDay+", "+sTwoDays+", "+sThreeDays+", "+sFourDays+"]";
 
             hasData = true;
 
