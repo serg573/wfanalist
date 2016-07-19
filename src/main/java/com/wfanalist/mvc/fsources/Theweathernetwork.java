@@ -63,7 +63,7 @@ public class Theweathernetwork extends AbstractSourse implements ConnectedSource
         if (System.getProperty("os.name").equals("Linux")) {
             System.setProperty("phantomjs.binary.path", "/home/serg/Downloads/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
         } else {
-            System.setProperty("phantomjs.binary.path", "E:\\Tools\\phantomjs.exe");
+            System.setProperty("phantomjs.binary.path", "D:\\VasilievS\\Tools\\phantomjs.exe");
         }
 
         driver = new PhantomJSDriver();
